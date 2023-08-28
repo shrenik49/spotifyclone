@@ -1,4 +1,5 @@
 import Header from "@/Components/Header";
+import ListItem from "@/Components/ListItem";
 
 export default function Home() {
   return (
@@ -9,9 +10,40 @@ export default function Home() {
     w-full
     overflow-hidden
     overflow-y-auto">
-      <Header>
-        Main Content of spotify
+      <Header >
+        <div className="mb-2">
+          <h1
+            className="
+            text-white
+            text-3xl
+            font-semibold"
+          >
+            Header Content
+          </h1>
+          <div
+            className="grid
+            grid-cols-1
+            sm:grid-cols-2
+            2xl:grid-cols-4
+            gap-3
+            mt-4"
+          >
+            <ListItem
+            image = "/images/liked.png"
+            name="Liked Songs"
+            href="Link"
+            />
+          </div>
+        </div>
       </Header>
+      <div className="mt-2 mb-7 px-6">
+        <div className="flex justify-between items-center">
+          <h1 className="text-white text-2xl font-semibold">New Songs</h1>
+        </div>
+        <div>
+          list of songs!
+        </div>
+      </div>
     </div>
   )
 }
